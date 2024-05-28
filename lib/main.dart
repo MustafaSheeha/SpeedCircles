@@ -5,6 +5,7 @@ import 'package:speedcircles/my_app.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  CacheHelper().init();
   Get.put(CacheHelper());
   runApp(const MyApp());
 }
