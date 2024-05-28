@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 import '../constants/app_strings.dart';
@@ -19,4 +18,3 @@ class SloganWidget extends StatelessWidget {
     );
   }
 }
-

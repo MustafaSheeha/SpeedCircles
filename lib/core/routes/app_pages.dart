@@ -4,7 +4,6 @@ import 'package:speedcircles/features/splash/bindings/splash_binding.dart';
 
 import '../../features/splash/view/splash_view.dart';
 
-
 Transition defaultTransition = Transition.zoom;
 Duration defaultTransitionDuration = const Duration(milliseconds: 300);
 
