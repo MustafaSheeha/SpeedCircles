@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:speedcircles/core/constants/app_strings.dart';
 import 'package:speedcircles/features/onboarding/controller/onboarding_controller.dart';
-import 'widgets/next_button_widget.dart';
 import 'widgets/onboarding_body_widget.dart';
 import 'widgets/onboarding_indicator_generator.dart';
-import 'widgets/skip_widget.dart';
+import 'widgets/text_widget.dart';
 
 class OnboardingView extends StatelessWidget {
   const OnboardingView({super.key});
@@ -36,13 +36,19 @@ class OnboardingView extends StatelessWidget {
                   },
                 ),
               )),
+              const OnboardingIndicatorGenerator(),
               Row(
                 children: [
-                  const SkipWidget(),
+                  const TextWidget(text: AppStrings.skip),
                   const Spacer(),
-                  const OnboardingIndicatorGenerator(),
                   const Spacer(),
-                  NextButtonWidget(onTap: onboardingController.nextPage),
+                  GetBuilder<OnboardingController>(
+                      builder: (controller) => controller.isLastOnboardingPage()
+                          ? const TextWidget(text: AppStrings.startNow)
+                          : TextWidget(
+                              text: AppStrings.next,
+                              onTap: onboardingController.nextPage,
+                            ))
                 ],
               )
             ],

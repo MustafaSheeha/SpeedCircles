@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -14,15 +13,14 @@ class OnboardingIndicatorGenerator extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetBuilder<OnboardingController>(builder: (controller) {
       return Row(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           ...List.generate(
               controller.onboardingModelList.length,
               (index) => Padding(
-                    padding:
-                        const EdgeInsets.symmetric(horizontal: 8),
+                    padding: const EdgeInsets.symmetric(horizontal: 8),
                     child: OnboardingIndicator(
-                        isActive:
-                            index == controller.pageCurrentIndex),
+                        isActive: index == controller.pageCurrentIndex),
                   ))
         ],
       );

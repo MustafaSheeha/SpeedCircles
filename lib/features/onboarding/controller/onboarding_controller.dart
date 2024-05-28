@@ -14,6 +14,11 @@ class OnboardingController extends GetxController {
     update();
   }
 
+  bool isLastOnboardingPage() {
+    return pageCurrentIndex == onboardingModelList.length - 1;
+    
+  }
+
   void nextPage() {
     if (pageCurrentIndex < onboardingModelList.length - 1) {
       pageController?.nextPage(
