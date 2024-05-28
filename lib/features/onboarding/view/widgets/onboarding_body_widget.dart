@@ -10,14 +10,11 @@ final String? image,title,description;
   @override
   Widget build(BuildContext context) {
     return  Column(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
-        const Spacer(flex: 3),
         OnboardingImageWidget(image: image),
-        const Spacer(flex: 2),
         VarietyAndReasonablePriceWidget(title: title),
-        const Spacer(),
         VarietyAndReasonablePriceDescriptionWidget(description: description),
-        const Spacer(flex: 3),
       ],
     );
   }
