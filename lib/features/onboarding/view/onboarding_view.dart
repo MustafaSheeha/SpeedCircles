@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:speedcircles/features/onboarding/controller/onboarding_controller.dart';
 import 'widgets/next_button_widget.dart';
+import 'widgets/onboarding_body_widget.dart';
 import 'widgets/skip_widget.dart';
 import 'widgets/variety_and_reasonable_price_description_widget.dart';
 import 'widgets/variety_and_reasonable_price_widget.dart';
@@ -11,28 +14,33 @@ class OnboardingView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Column(
-          children: [
-            const Spacer(flex: 3),
-            Image.asset(
-              'assets/images/VarietyAndReasonablePrice.png',
-              height: 200,
-            ),
-            const Spacer(flex: 2),
-            const VarietyAndReasonablePriceWidget(),
-            const Spacer(),
-            const VarietyAndReasonablePriceDescriptionWidget(),
-            const Spacer(flex: 3),
-            const Row(
-              children: [
-                SkipWidget(),
-                NextButtonWidget(),
-              ],
-            )
-          ],
+        child: Padding(
+          padding: const EdgeInsets.all(12),
+          child: Column(
+            children: [
+              Expanded(
+                  child: GetBuilder<OnboardingController>(
+                builder: (controller) => PageView.builder(
+                  itemCount: controller.onboardingModelList.length,
+                  itemBuilder: (context, index) {
+                    return OnboardingBodyWidget(
+                      image: controller.onboardingModelList[index].image,
+                      title:controller.onboardingModelList[index].title ,
+                      description:controller.onboardingModelList[index].description ,
+                    );
+                  },
+                ),
+              )),
+              const Row(
+                children: [
+                  SkipWidget(),
+                  NextButtonWidget(),
+                ],
+              )
+            ],
+          ),
         ),
       ),
     );
   }
 }
-
