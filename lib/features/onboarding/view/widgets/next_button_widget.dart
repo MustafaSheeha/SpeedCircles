@@ -4,13 +4,13 @@ import '../../../../core/constants/app_colors.dart';
 
 class NextButtonWidget extends StatelessWidget {
   const NextButtonWidget({
-    super.key,
+    super.key, this.onTap,
   });
-
+  final void Function()? onTap;
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton(
-        onPressed: () {},
+    return GestureDetector(
+        onTap: onTap,
         child: Container(
             decoration: const BoxDecoration(
                 color: AppColors.primary, shape: BoxShape.circle),
