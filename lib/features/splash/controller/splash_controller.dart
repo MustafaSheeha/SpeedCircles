@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:speedcircles/features/onboarding/bindings/onboarding_binding.dart';
 import 'package:speedcircles/features/onboarding/view/onboarding_view.dart';
 
 class SplashController extends GetxController
@@ -15,7 +16,7 @@ class SplashController extends GetxController
     animation = Tween<double>(begin: 0, end: 1).animate(animationController);
     animationController.forward();
     Future.delayed(const Duration(seconds: 3), () {
-      Get.off(() => const OnboardingView());
+      Get.off(() => const OnboardingView(),binding: OnboardingBinding());
     });
   }
 
