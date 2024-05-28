@@ -5,6 +5,8 @@ import 'package:speedcircles/core/widgets/vertical_space.dart';
 import 'package:speedcircles/features/onboarding/controller/onboarding_controller.dart';
 import 'widgets/onboarding_body_widget.dart';
 import 'widgets/onboarding_indicator_generator.dart';
+import 'widgets/onboarding_navigation_bar.dart';
+import 'widgets/onboarding_page_viewer.dart';
 import 'widgets/text_widget.dart';
 
 class OnboardingView extends StatelessWidget {
@@ -21,42 +23,11 @@ class OnboardingView extends StatelessWidget {
             child: ListView(
               physics: const BouncingScrollPhysics(),
               children: [
-                SizedBox(
-                  height: Get.height * 0.85,
-                  child: GetBuilder<OnboardingController>(
-                    builder: (controller) => PageView.builder(
-                      controller: controller.pageController,
-                      onPageChanged: (value) {
-                        controller.updatepageCurrentIndex(value);
-                      },
-                      itemCount: controller.onboardingModelList.length,
-                      itemBuilder: (context, index) {
-                        return OnboardingBodyWidget(
-                          image: controller.onboardingModelList[index].image,
-                          title: controller.onboardingModelList[index].title,
-                          description:
-                              controller.onboardingModelList[index].description,
-                        );
-                      },
-                    ),
-                  ),
-                ),
+                const OnboardingPageViewer(),
                 const OnboardingIndicatorGenerator(),
                 const VerticalSpace(20),
-                Row(
-                  children: [
-                    const TextWidget(text: AppStrings.skip),
-                    const Spacer(),
-                    GetBuilder<OnboardingController>(
-                        builder: (controller) =>
-                            controller.isLastOnboardingPage()
-                                ? const TextWidget(text: AppStrings.startNow)
-                                : TextWidget(
-                                    text: AppStrings.next,
-                                    onTap: onboardingController.nextPage,
-                                  ))
-                  ],
-                )
+                OnboardingNavigationBar(
+                    onboardingController: onboardingController)
               ],
             ),
           ),
