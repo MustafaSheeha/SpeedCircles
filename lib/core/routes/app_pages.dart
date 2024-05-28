@@ -1,5 +1,7 @@
 import 'package:get/get.dart';
 import 'package:speedcircles/core/routes/app_routes.dart';
+import 'package:speedcircles/features/onboarding/bindings/onboarding_binding.dart';
+import 'package:speedcircles/features/onboarding/view/onboarding_view.dart';
 import 'package:speedcircles/features/splash/bindings/splash_binding.dart';
 
 import '../../features/splash/view/splash_view.dart';
@@ -15,6 +17,13 @@ abstract class AppPages {
       name: AppRouteNames.splash,
       page: () => const SplashView(),
       binding: SplashBinding(),
+      transition: defaultTransition,
+      transitionDuration: defaultTransitionDuration,
+    ),
+    GetPage(
+      name: AppRouteNames.onboarding,
+      page: () => const OnboardingView(),
+      binding: OnboardingBinding(),
       transition: defaultTransition,
       transitionDuration: defaultTransitionDuration,
     ),
