@@ -19,7 +19,8 @@ class OnboardingView extends StatelessWidget {
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 12),
-          child: Expanded(
+          child: SizedBox(
+            height: Get.height,
             child: ListView(
               physics: const BouncingScrollPhysics(),
               children: [
