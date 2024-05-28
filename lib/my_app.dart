@@ -8,8 +8,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  GetMaterialApp(
-      debugShowCheckedModeBanner: false,initialRoute: AppRouteNames.splash,
+    return GetMaterialApp(
+      debugShowCheckedModeBanner: false,
+      initialRoute: AppRouteNames.splash,
       getPages: AppPages.routesList,
     );
   }

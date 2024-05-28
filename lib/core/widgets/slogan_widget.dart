@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 import '../constants/app_strings.dart';
@@ -14,9 +13,8 @@ class SloganWidget extends StatelessWidget {
       AppStrings.slogan,
       style: TextStyle(
           fontSize: 26,
-          fontFamily: AppStrings.hitchHike,
+          fontFamily: AppStrings.hitchHikeFont,
           fontWeight: FontWeight.bold),
     );
   }
 }
-
