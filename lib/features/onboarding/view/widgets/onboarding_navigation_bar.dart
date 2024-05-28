@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/get_state_manager.dart';
 
 import '../../../../core/constants/app_strings.dart';
+import '../../../../core/functions/navigate_to_register_view.dart';
 import '../../controller/onboarding_controller.dart';
 import 'text_widget.dart';
 
@@ -17,16 +18,16 @@ class OnboardingNavigationBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        TextWidget(
+        const TextWidget(
           text: AppStrings.skip,
-          onTap: () {},
+          onTap: navigateToRegisterView,
         ),
         const Spacer(),
         GetBuilder<OnboardingController>(
             builder: (controller) => controller.isLastOnboardingPage()
-                ? TextWidget(
+                ? const TextWidget(
                     text: AppStrings.startNow,
-                    onTap: () {},
+                    onTap: navigateToRegisterView,
                   )
                 : TextWidget(
                     text: AppStrings.next,

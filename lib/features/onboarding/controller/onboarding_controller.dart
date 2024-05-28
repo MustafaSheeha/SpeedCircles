@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:speedcircles/core/constants/app_assets.dart';
 import 'package:speedcircles/core/constants/app_strings.dart';
+import 'package:speedcircles/core/database/cache/cache_helper.dart';
 
 import '../model/onboarding_model.dart';
 
@@ -16,7 +17,6 @@ class OnboardingController extends GetxController {
 
   bool isLastOnboardingPage() {
     return pageCurrentIndex == onboardingModelList.length - 1;
-    
   }
 
   void nextPage() {
@@ -45,6 +45,13 @@ class OnboardingController extends GetxController {
           image: AppAssets.warranty,
           title: AppStrings.warranty),
     ];
+    setIsOnBoardingVisited();
     super.onInit();
+  }
+
+  void setIsOnBoardingVisited() {
+    
+    Get.find<CacheHelper>()
+        .setData(key: AppStrings.isOnBoardingVisitedKey, value: true);
   }
 }
