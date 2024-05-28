@@ -9,9 +9,17 @@ class OnboardingController extends GetxController {
   int pageCurrentIndex = 0;
   PageController? pageController;
   List<OnboardingModel> onboardingModelList = [];
-  updatepageCurrentIndex(int value) {
+  void updatepageCurrentIndex(int value) {
     pageCurrentIndex = value;
     update();
+  }
+
+  void nextPage() {
+    if (pageCurrentIndex < onboardingModelList.length - 1) {
+      pageController?.nextPage(
+          duration: const Duration(milliseconds: 300),
+          curve: Curves.bounceInOut);
+    }
   }
 
   @override

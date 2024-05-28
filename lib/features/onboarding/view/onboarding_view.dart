@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:speedcircles/core/constants/app_colors.dart';
 import 'package:speedcircles/features/onboarding/controller/onboarding_controller.dart';
 import 'widgets/next_button_widget.dart';
 import 'widgets/onboarding_body_widget.dart';
+import 'widgets/onboarding_indicator.dart';
 import 'widgets/skip_widget.dart';
 
 class OnboardingView extends StatelessWidget {
@@ -11,6 +11,7 @@ class OnboardingView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    OnboardingController onboardingController = Get.find();
     return Scaffold(
       body: SafeArea(
         child: Padding(
@@ -55,31 +56,13 @@ class OnboardingView extends StatelessWidget {
                     );
                   }),
                   const Spacer(),
-                  const NextButtonWidget(),
+                   NextButtonWidget(onTap:onboardingController.nextPage ),
                 ],
               )
             ],
           ),
         ),
       ),
-    );
-  }
-}
-
-class OnboardingIndicator extends StatelessWidget {
-  const OnboardingIndicator({
-    super.key,
-    this.isActive = false,
-  });
-  final bool isActive;
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      height: isActive ? 10 : 5,
-      width: isActive ? 40 : 20,
-      decoration: BoxDecoration(
-          borderRadius: const BorderRadius.all(Radius.circular(20)),
-          color: isActive ? AppColors.primary : AppColors.grey),
     );
   }
 }
