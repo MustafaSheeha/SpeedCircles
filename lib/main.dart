@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:speedcircles/core/database/cache/cache_helper.dart';
 import 'package:speedcircles/my_app.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  Get.put(CacheHelper());
   runApp(const MyApp());
 }
