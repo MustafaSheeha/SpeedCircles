@@ -1,5 +1,4 @@
-class AppAssets {
-  AppAssets._();
+abstract class AppAssets {
   
   /// Assets for imagesLogoNoBackground
   /// assets/images/logo-no-background.png
@@ -7,7 +6,7 @@ class AppAssets {
 
   /// Assets for imagesVarietyAndReasonablePrice
   /// assets/images/varietyAndReasonablePrice.png
-  static const String varietyAndReasonablePrice = "assets/images/varietyAndReasonablePrice.png";
+  static const String varietyAndReasonablePrice = "assets/images/varietyReasonablePrice.png";
 
   /// Assets for imagesVariousPayment
   /// assets/images/variousPayment.png
