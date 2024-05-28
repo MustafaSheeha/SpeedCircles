@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:speedcircles/core/constants/app_assets.dart';
-import 'package:speedcircles/core/constants/app_strings.dart';
-
 import '../../../core/widgets/logo_widget.dart';
 import '../../../core/widgets/slogan_widget.dart';
 import '../controller/splash_controller.dart';
