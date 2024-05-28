@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import 'package:speedcircles/features/onboarding/controller/onboarding_controller.dart';
 import 'widgets/next_button_widget.dart';
 import 'widgets/onboarding_body_widget.dart';
-import 'widgets/onboarding_indicator.dart';
+import 'widgets/onboarding_indicator_generator.dart';
 import 'widgets/skip_widget.dart';
 
 class OnboardingView extends StatelessWidget {
@@ -40,23 +40,9 @@ class OnboardingView extends StatelessWidget {
                 children: [
                   const SkipWidget(),
                   const Spacer(),
-                  GetBuilder<OnboardingController>(builder: (controller) {
-                    return Row(
-                      children: [
-                        ...List.generate(
-                            controller.onboardingModelList.length,
-                            (index) => Padding(
-                                  padding:
-                                      const EdgeInsets.symmetric(horizontal: 8),
-                                  child: OnboardingIndicator(
-                                      isActive:
-                                          index == controller.pageCurrentIndex),
-                                ))
-                      ],
-                    );
-                  }),
+                  const OnboardingIndicatorGenerator(),
                   const Spacer(),
-                   NextButtonWidget(onTap:onboardingController.nextPage ),
+                  NextButtonWidget(onTap: onboardingController.nextPage),
                 ],
               )
             ],
