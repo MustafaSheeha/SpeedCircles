@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:speedcircles/core/routes/app_route_names.dart';
 import 'package:speedcircles/features/auth/auth_template_widget.dart';
 import 'package:speedcircles/features/auth/login/view/widgets/new_account_widget.dart';
 import '../../../../core/widgets/vertical_space.dart';
@@ -16,7 +17,9 @@ class LoginView extends StatelessWidget {
       children: [
         const LoginBodyWidget(),
         VerticalSpace(Get.height * 0.02),
-        const NewAccountWidget(),
+        NewAccountWidget(
+          onPressed: () => Get.toNamed(AppRouteNames.register),
+        ),
       ],
     )));
   }
