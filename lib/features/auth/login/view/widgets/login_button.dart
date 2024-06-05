@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 
 import '../../../../../core/constants/app_colors.dart';
 
-class LoginButton extends StatelessWidget {
-  const LoginButton({
-    super.key, this.onPressed,
+class AuthButton extends StatelessWidget {
+  const AuthButton({
+    super.key,
+    this.onPressed,
   });
   final void Function()? onPressed;
   @override
