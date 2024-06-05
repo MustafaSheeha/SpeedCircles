@@ -6,7 +6,7 @@ import 'package:speedcircles/features/onboarding/bindings/onboarding_binding.dar
 import 'package:speedcircles/features/onboarding/view/onboarding_view.dart';
 
 import '../../../core/functions/navigate_to_onboarding_view.dart';
-import '../../../core/functions/navigate_to_register_view.dart';
+import '../../../core/functions/navigate_to_login_view.dart';
 
 class SplashController extends GetxController
     with GetSingleTickerProviderStateMixin {
@@ -24,20 +24,16 @@ class SplashController extends GetxController
       final bool isOnBoardingVisited =
           Get.find<CacheHelper>().getData(key: "isOnBoardingVisited") ?? false;
       if (isOnBoardingVisited) {
-        navigateToRegisterView();
+        navigateToLoginView();
       } else {
         navigateToOnboardingView();
       }
     });
   }
 
- 
-
-  
-
   @override
   void onClose() {
-    super.onClose();
     animationController.dispose();
+    super.onClose();
   }
 }
