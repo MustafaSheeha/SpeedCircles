@@ -27,4 +27,5 @@ abstract class AppStrings {
   static const registerNow = 'Register Now';
   static const createAccount= 'Create Account';
   static const exploreMore = 'Explore More';
+  static const orLoginWith = 'or Login with';
 }
