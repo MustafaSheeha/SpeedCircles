@@ -16,24 +16,26 @@ class OnboardingNavigationBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        const TextWidget(
-          text: AppStrings.skip,
-          onTap: navigateToLoginView,
-        ),
-        const Spacer(),
-        GetBuilder<OnboardingController>(
-            builder: (controller) => controller.isLastOnboardingPage()
-                ? const TextWidget(
-                    text: AppStrings.startNow,
-                    onTap: navigateToLoginView,
-                  )
-                : TextWidget(
-                    text: AppStrings.next,
-                    onTap: onboardingController.nextPage,
-                  ))
-      ],
-    );
+    return GetBuilder<OnboardingController>(
+        builder: (controller) => Row(
+              children: [
+                controller.isLastOnboardingPage()
+                    ? const SizedBox.shrink()
+                    : const TextWidget(
+                        text: AppStrings.skip,
+                        onTap: navigateToLoginView,
+                      ),
+                const Spacer(),
+                controller.isLastOnboardingPage()
+                    ? const TextWidget(
+                        text: AppStrings.startNow,
+                        onTap: navigateToLoginView,
+                      )
+                    : TextWidget(
+                        text: AppStrings.next,
+                        onTap: onboardingController.nextPage,
+                      )
+              ],
+            ));
   }
 }

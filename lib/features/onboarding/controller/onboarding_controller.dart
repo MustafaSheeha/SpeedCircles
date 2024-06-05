@@ -45,8 +45,12 @@ class OnboardingController extends GetxController {
           image: AppAssets.imagesWarranty,
           title: AppStrings.warranty),
     ];
-    setIsOnBoardingVisited();
     super.onInit();
+  }
+  @override
+  void onReady() {
+    super.onReady();
+    setIsOnBoardingVisited();
   }
 
   void setIsOnBoardingVisited() {
