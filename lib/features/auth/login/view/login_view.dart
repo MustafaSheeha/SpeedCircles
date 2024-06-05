@@ -20,7 +20,7 @@ class LoginView extends StatelessWidget {
             children: [
               const BackgroundClipper(),
               const LogoWidget(),
-              VerticalSpace(Get.height * 0.05),
+              VerticalSpace(Get.height * 0.03),
               const LoginBodyWidget(),
               const Spacer(),
               const BackgroundClipper(

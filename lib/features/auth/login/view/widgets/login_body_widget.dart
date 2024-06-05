@@ -32,7 +32,7 @@ class LoginBodyWidget extends StatelessWidget {
           const WelcomeLoginWidget(),
           VerticalSpace(Get.height * 0.05),
           const LoginFormWidget(),
-          VerticalSpace(Get.height * 0.05),
+          VerticalSpace(Get.height * 0.02),
         ],
       ),
     );
