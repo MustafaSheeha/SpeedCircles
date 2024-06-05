@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:speedcircles/features/auth/login/view/widgets/auth_form_widget.dart';
+import 'package:speedcircles/features/auth/widgets/auth_form_widget.dart';
 import 'package:speedcircles/features/auth/widgets/welcome_widget.dart';
 import '../../../../../core/constants/app_strings.dart';
 import '../../../../../core/widgets/custom_text_form_field.dart';
