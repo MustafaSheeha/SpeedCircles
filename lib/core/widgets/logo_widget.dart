@@ -10,6 +10,6 @@ class LogoWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Image.asset(AppAssets.logoNoBackground,width: Get.width * 0.7,);
+    return Image.asset(AppAssets.imagesLogoNoBackground,width: Get.width * 0.7,);
   }
 }
