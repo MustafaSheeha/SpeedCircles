@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:speedcircles/core/database/cache/cache_helper.dart';
-import 'package:speedcircles/features/auth/register/view/register_view.dart';
-import 'package:speedcircles/features/onboarding/bindings/onboarding_binding.dart';
-import 'package:speedcircles/features/onboarding/view/onboarding_view.dart';
 
 import '../../../core/functions/navigate_to_onboarding_view.dart';
 import '../../../core/functions/navigate_to_login_view.dart';
