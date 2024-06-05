@@ -33,16 +33,16 @@ class OnboardingController extends GetxController {
     onboardingModelList = [
       OnboardingModel(
           description: AppStrings.varietyAndReasonablePriceDescription,
-          image: AppAssets.varietyAndReasonablePrice,
+          image: AppAssets.imagesVarietyReasonablePrice,
           title: AppStrings.varietyAndReasonablePrice),
       OnboardingModel(
           description:
               AppStrings.variousPaymentMethodsAndInstallmentsDescription,
-          image: AppAssets.variousPayment,
+          image: AppAssets.imagesVariousPayment,
           title: AppStrings.variousPaymentMethodsAndInstallments),
       OnboardingModel(
           description: AppStrings.warrantyDescription,
-          image: AppAssets.warranty,
+          image: AppAssets.imagesWarranty,
           title: AppStrings.warranty),
     ];
     setIsOnBoardingVisited();
@@ -50,7 +50,6 @@ class OnboardingController extends GetxController {
   }
 
   void setIsOnBoardingVisited() {
-    
     Get.find<CacheHelper>()
         .setData(key: AppStrings.isOnBoardingVisitedKey, value: true);
   }
