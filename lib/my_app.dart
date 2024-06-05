@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:speedcircles/core/routes/app_pages.dart';
-import 'package:speedcircles/core/routes/app_routes.dart';
+
+import 'core/routes/app_route_names.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
