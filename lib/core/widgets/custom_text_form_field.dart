@@ -33,7 +33,7 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
         decoration: InputDecoration(
           labelText: widget.labelText,
           labelStyle: AppTextStyles.gabrielaPrimaryBold20
-              .copyWith(color: AppColors.grey, fontSize: 16),
+              .copyWith(color: AppColors.grey, fontSize: 16,fontWeight: FontWeight.w300),
           prefixIcon: widget.prefixIcon,
           suffixIcon: widget.obscureText
               ? IconButton(
