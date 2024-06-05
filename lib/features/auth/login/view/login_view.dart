@@ -10,18 +10,25 @@ class LoginView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
-      body: Column(
-        children: [
-          const BackgroundClipper(),
-          const LogoWidget(),
-          VerticalSpace(Get.height * 0.05),
-          const LoginBodyWidget(),
-          const Spacer(),
-          const BackgroundClipper(
-            quarterTurns: 2,
+    return Scaffold(
+      body: SingleChildScrollView(
+        physics: const BouncingScrollPhysics(),
+        keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
+        child: SizedBox(
+          height: Get.height,
+          child: Column(
+            children: [
+              const BackgroundClipper(),
+              const LogoWidget(),
+              VerticalSpace(Get.height * 0.05),
+              const LoginBodyWidget(),
+              const Spacer(),
+              const BackgroundClipper(
+                quarterTurns: 2,
+              ),
+            ],
           ),
-        ],
+        ),
       ),
     );
   }
