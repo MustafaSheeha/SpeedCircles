@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:speedcircles/core/constants/app_colors.dart';
 import 'package:speedcircles/core/constants/app_strings.dart';
-import 'package:speedcircles/core/utils/app_text_styles.dart';
 import 'package:speedcircles/core/widgets/custom_text_form_field.dart';
 
 import '../../../../../core/widgets/vertical_space.dart';
+import 'login_button.dart';
 
 class LoginFormWidget extends StatelessWidget {
   const LoginFormWidget({super.key});
@@ -26,6 +25,8 @@ class LoginFormWidget extends StatelessWidget {
           labelText: AppStrings.password,
           prefixIcon: Icon(Icons.lock_open_outlined),
         ),
+        VerticalSpace(Get.height * 0.02),
+        const LoginButton()
       ],
     ));
   }
