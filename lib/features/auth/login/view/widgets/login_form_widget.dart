@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:speedcircles/core/constants/app_colors.dart';
 import 'package:speedcircles/core/constants/app_strings.dart';
+import 'package:speedcircles/core/utils/app_text_styles.dart';
+import 'package:speedcircles/core/widgets/custom_text_form_field.dart';
+
+import '../../../../../core/widgets/vertical_space.dart';
 
 class LoginFormWidget extends StatelessWidget {
   const LoginFormWidget({super.key});
@@ -10,16 +15,16 @@ class LoginFormWidget extends StatelessWidget {
     return Form(
         child: Column(
       children: [
-        TextFormField(
-            decoration: const InputDecoration(
+        const CustomTextFormField(
+          obscureText: false,
           labelText: AppStrings.email,
-          prefixIcon: Icon(
-            Icons.alternate_email_outlined,
-            color: AppColors.grey,
-          ),
-          enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.all(Radius.circular(22))),
-            
-          )
+          prefixIcon: Icon(Icons.alternate_email_outlined),
+        ),
+        VerticalSpace(Get.height * 0.02),
+        const CustomTextFormField(
+          obscureText: true,
+          labelText: AppStrings.password,
+          prefixIcon: Icon(Icons.lock_open_outlined),
         ),
       ],
     ));

@@ -12,8 +12,7 @@ class LoginBodyWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.symmetric(horizontal: Get.width * 0.1),
-      padding: EdgeInsets.symmetric(horizontal: Get.width * 0.1),
-      height: Get.height * 0.5,
+      padding: EdgeInsets.symmetric(horizontal: Get.width * 0.05),
       decoration: BoxDecoration(
         border: Border.all(color: AppColors.primary),
         color: AppColors.white.withOpacity(0.9),
@@ -31,8 +30,9 @@ class LoginBodyWidget extends StatelessWidget {
         children: [
           VerticalSpace(Get.height * 0.05),
           const WelcomeLoginWidget(),
-          VerticalSpace(Get.height * 0.01),
-          const LoginFormWidget()
+          VerticalSpace(Get.height * 0.05),
+          const LoginFormWidget(),
+          VerticalSpace(Get.height * 0.05),
         ],
       ),
     );
