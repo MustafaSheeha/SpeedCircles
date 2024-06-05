@@ -16,7 +16,7 @@ class BackgroundClipper extends StatelessWidget {
       child: ClipPath(
         clipper: ContainerClipper(),
         child: Container(
-          height: Get.height * 0.15,
+          height: Get.height * 0.1,
           color: AppColors.primary,
         ),
       ),
