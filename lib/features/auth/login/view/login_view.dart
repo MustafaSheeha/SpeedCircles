@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:speedcircles/core/widgets/logo_widget.dart';
+import 'package:speedcircles/features/auth/login/view/widgets/new_account_widget.dart';
 import '../../../../core/widgets/vertical_space.dart';
 import 'widgets/background_clipper.dart';
 import 'widgets/login_body_widget.dart';
@@ -20,8 +21,10 @@ class LoginView extends StatelessWidget {
             children: [
               const BackgroundClipper(),
               const LogoWidget(),
-              VerticalSpace(Get.height * 0.03),
+              VerticalSpace(Get.height * 0.04),
               const LoginBodyWidget(),
+              VerticalSpace(Get.height * 0.04),
+              const NewAccountWidget(),
               const Spacer(),
               const BackgroundClipper(
                 quarterTurns: 2,

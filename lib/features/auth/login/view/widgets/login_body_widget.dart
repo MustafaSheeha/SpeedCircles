@@ -28,11 +28,11 @@ class LoginBodyWidget extends StatelessWidget {
       ),
       child: Column(
         children: [
-          VerticalSpace(Get.height * 0.05),
+          VerticalSpace(Get.height * 0.04),
           const WelcomeLoginWidget(),
-          VerticalSpace(Get.height * 0.05),
+          VerticalSpace(Get.height * 0.04),
           const LoginFormWidget(),
-          VerticalSpace(Get.height * 0.02),
+          VerticalSpace(Get.height * 0.015),
         ],
       ),
     );
