@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -7,9 +6,11 @@ import '../../../core/widgets/vertical_space.dart';
 
 class AuthContainerWidget extends StatelessWidget {
   const AuthContainerWidget({
-    super.key, required this.welcomeLoginWidget, required this.formWidget,
+    super.key,
+    required this.welcomeWidget,
+    required this.formWidget,
   });
-  final Widget welcomeLoginWidget;
+  final Widget welcomeWidget;
   final Widget formWidget;
   @override
   Widget build(BuildContext context) {
@@ -32,7 +33,7 @@ class AuthContainerWidget extends StatelessWidget {
       child: Column(
         children: [
           VerticalSpace(Get.height * 0.04),
-          welcomeLoginWidget,
+          welcomeWidget,
           VerticalSpace(Get.height * 0.04),
           formWidget,
           VerticalSpace(Get.height * 0.015),

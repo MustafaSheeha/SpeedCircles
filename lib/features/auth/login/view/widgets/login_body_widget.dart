@@ -9,7 +9,7 @@ class LoginBodyWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const AuthContainerWidget(
-      welcomeLoginWidget: WelcomeLoginWidget(),
+      welcomeWidget: WelcomeLoginWidget(),
       formWidget: LoginFormWidget(),
     );
   }
