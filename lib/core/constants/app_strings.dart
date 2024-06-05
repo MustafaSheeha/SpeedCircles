@@ -20,6 +20,9 @@ abstract class AppStrings {
   static const loginToContinue = 'Login to continue';
   static const email = 'Email';
   static const password = 'Password';
+  static const forgotPassword = 'Forgot Password?';
   static const doNotHaveAnAccount = 'Don\'t have an account?';
   static const registerNow = 'Register Now';
+  static const createAccount= 'Create Account';
+  static const exploreMore = 'Explore More';
 }
