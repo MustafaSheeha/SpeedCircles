@@ -16,4 +16,10 @@ abstract class AppStrings {
       "Possibility of payment in cash or through multiple bank cards. With the possibility of installments through multiple options.";
   static const startNow = 'Start Now';
   static const isOnBoardingVisitedKey = 'isOnBoardingVisited';
+  static const welcome = 'Welcome';
+  static const loginToContinue = 'Login to continue';
+  static const email = 'Email';
+  static const password = 'Password';
+  static const doNotHaveAnAccount = 'Don\'t have an account?';
+  static const registerNow = 'Register Now';
 }
