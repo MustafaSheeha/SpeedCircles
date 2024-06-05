@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:speedcircles/features/auth/auth_template_widget.dart';
+import 'package:speedcircles/features/auth/widgets/auth_template_widget.dart';
 
 class RegisterView extends StatelessWidget {
   const RegisterView({super.key});

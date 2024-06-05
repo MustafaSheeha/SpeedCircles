@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../core/widgets/logo_widget.dart';
-import '../../core/widgets/vertical_space.dart';
-import 'login/view/widgets/background_clipper.dart';
+import '../../../core/widgets/logo_widget.dart';
+import '../../../core/widgets/vertical_space.dart';
+import 'background_clipper.dart';
 
 class AuthTemplateWidget extends StatelessWidget {
   const AuthTemplateWidget({super.key, required this.authTemplateBody});
