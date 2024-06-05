@@ -12,10 +12,10 @@ class AuthButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return CircleAvatar(
       backgroundColor: AppColors.primary,
-      radius: 30,
+      radius: 25,
       child: IconButton(
         onPressed: onPressed,
-        icon: const Icon(Icons.east, color: AppColors.white, size: 45),
+        icon: const Icon(Icons.east, color: AppColors.white, size: 35),
       ),
     );
   }

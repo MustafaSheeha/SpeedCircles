@@ -14,30 +14,32 @@ class AuthContainerWidget extends StatelessWidget {
   final Widget formWidget;
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: EdgeInsets.symmetric(horizontal: Get.width * 0.1),
-      padding: EdgeInsets.symmetric(horizontal: Get.width * 0.05),
-      decoration: BoxDecoration(
-        border: Border.all(color: AppColors.primary),
-        color: AppColors.white.withOpacity(0.9),
-        borderRadius: BorderRadius.circular(22),
-        boxShadow: [
-          BoxShadow(
-            color: AppColors.grey.withOpacity(0.3),
-            blurRadius: 2,
-            spreadRadius: 3,
-            offset: const Offset(2, 5),
-          )
-        ],
-      ),
-      child: Column(
-        children: [
-          VerticalSpace(Get.height * 0.04),
-          welcomeWidget,
-          VerticalSpace(Get.height * 0.04),
-          formWidget,
-          VerticalSpace(Get.height * 0.015),
-        ],
+    return SingleChildScrollView(
+      child: Container(
+        margin: EdgeInsets.symmetric(horizontal: Get.width * 0.1),
+        padding: EdgeInsets.symmetric(horizontal: Get.width * 0.05),
+        decoration: BoxDecoration(
+          border: Border.all(color: AppColors.primary),
+          color: AppColors.white.withOpacity(0.9),
+          borderRadius: BorderRadius.circular(22),
+          boxShadow: [
+            BoxShadow(
+              color: AppColors.grey.withOpacity(0.3),
+              blurRadius: 2,
+              spreadRadius: 3,
+              offset: const Offset(2, 5),
+            )
+          ],
+        ),
+        child: Column(
+          children: [
+            VerticalSpace(Get.height * 0.04),
+            welcomeWidget,
+            VerticalSpace(Get.height * 0.04),
+            formWidget,
+            VerticalSpace(Get.height * 0.015),
+          ],
+        ),
       ),
     );
   }

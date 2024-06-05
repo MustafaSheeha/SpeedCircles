@@ -12,7 +12,7 @@ class AuthFormWidget extends StatelessWidget {
         child: Column(
       children: [
         textFormFieldList,
-        VerticalSpace(Get.height * 0.02),
+        VerticalSpace(Get.height * 0.01),
         const AuthButton()
       ],
     ));
