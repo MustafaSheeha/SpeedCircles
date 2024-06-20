@@ -4,8 +4,10 @@ import '../../../core/widgets/vertical_space.dart';
 import 'auth_button.dart';
 
 class AuthFormWidget extends StatelessWidget {
-  const AuthFormWidget({super.key, required this.textFormFieldList});
+  const AuthFormWidget(
+      {super.key, required this.textFormFieldList, this.onPressed});
   final Widget textFormFieldList;
+  final void Function()? onPressed;
   @override
   Widget build(BuildContext context) {
     return Form(
@@ -13,7 +15,9 @@ class AuthFormWidget extends StatelessWidget {
       children: [
         textFormFieldList,
         VerticalSpace(Get.height * 0.01),
-        const AuthButton()
+        AuthButton(
+          onPressed: onPressed,
+        )
       ],
     ));
   }
