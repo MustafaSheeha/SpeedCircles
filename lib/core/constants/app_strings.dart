@@ -29,6 +29,7 @@ abstract class AppStrings {
   static const exploreMore = 'Explore More';
   static const orLoginWith = 'or Login with';
   static const success = 'Success';
+  static const successfulLogin = 'Successful Login\nRedirecting to Your Account ...';
   static const yourAccountWasSuccessfullyCreated =
       'Your account was successfully created';
   static const authenticationError = 'Authentication Error';
@@ -36,6 +37,8 @@ abstract class AppStrings {
       'The password provided is too weak.';
   static const userNotFound = 'user-not-found';
   static const noUserFoundForThatEmail = 'No user found for that email.';
+  static const invalidCredential = 'invalid-credential';
+  static const theSuppliedAuthCredentialIsIncorrect = 'The supplied auth credential is incorrect, malformed or has expired.';
   static const wrongPassword = 'wrong-password';
   static const wrongPasswordProvidedForThatUser = 'Wrong password provided for that user.';
   static const invalidEmail = 'invalid-email';
@@ -47,7 +50,7 @@ abstract class AppStrings {
   static const operationNotAllowed = 'operation-not-allowed';
   static const emailPasswordAccountsAreNotEnabled = 'Email/Password accounts are not enabled.';
   static const weakPassword = 'weak-password';
-  static const thePasswordIsTooWeak = 'The password is too weak.';
+  static const thePasswordIsTooWeak = 'The password is too weak.\n Password should be at least 6 characters';
   static const networkRequestFailed = 'network-request-failed';
   static const networkRequestFailedPleaseCheckYourInternetConnection = 'Network request failed. Please check your internet connection.';
   static const anUndefinedError = 'An undefined Error happened.';
