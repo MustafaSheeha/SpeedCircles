@@ -25,7 +25,36 @@ abstract class AppStrings {
   static const forgotPassword = 'Forgot Password?';
   static const doNotHaveAnAccount = 'Don\'t have an account?';
   static const registerNow = 'Register Now';
-  static const createAccount= 'Create Account';
+  static const createAccount = 'Create Account';
   static const exploreMore = 'Explore More';
   static const orLoginWith = 'or Login with';
+  static const success = 'Success';
+  static const successfulLogin = 'Successful Login\nRedirecting to Your Account ...';
+  static const yourAccountWasSuccessfullyCreated =
+      'Your account was successfully created';
+  static const authenticationError = 'Authentication Error';
+  static const thePasswordProvidedIsTooWeak =
+      'The password provided is too weak.';
+  static const userNotFound = 'user-not-found';
+  static const noUserFoundForThatEmail = 'No user found for that email.';
+  static const invalidCredential = 'invalid-credential';
+  static const theSuppliedAuthCredentialIsIncorrect = 'The supplied auth credential is incorrect, malformed or has expired.';
+  static const wrongPassword = 'wrong-password';
+  static const wrongPasswordProvidedForThatUser = 'Wrong password provided for that user.';
+  static const invalidEmail = 'invalid-email';
+  static const theEmailAddressIsBadlyFormatted = 'The email address is badly formatted.';
+  static const userDisabled = 'user-disabled';
+  static const theUserAccountHasBeenDisabledByAnAdministrator = 'The user account has been disabled by an administrator.';
+  static const tooManyRequests = 'too-many-requests';
+  static const tooManyRequestsTryAgainLater = 'Too many requests. Try again later.';
+  static const operationNotAllowed = 'operation-not-allowed';
+  static const emailPasswordAccountsAreNotEnabled = 'Email/Password accounts are not enabled.';
+  static const weakPassword = 'weak-password';
+  static const thePasswordIsTooWeak = 'The password is too weak.\n Password should be at least 6 characters';
+  static const networkRequestFailed = 'network-request-failed';
+  static const networkRequestFailedPleaseCheckYourInternetConnection = 'Network request failed. Please check your internet connection.';
+  static const anUndefinedError = 'An undefined Error happened.';
+  static const emailAlreadyInUse = 'email-already-in-use';
+  static const theAccountAlreadyExistsForThatEmail =
+      'The account already exists for that email.';
 }
