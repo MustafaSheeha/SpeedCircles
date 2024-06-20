@@ -15,14 +15,13 @@ class LoginController extends GetxController {
 
   final UserModel userModel = UserModel();
 
-login()async{
-   try {
+  login() async {
+    try {
       userModel.email = emailController.text;
       userModel.password = passwordController.text;
       await _authService.signInWithEmailAndPassword(
           email: userModel.email!, password: userModel.password!);
-      Get.snackbar(
-          AppStrings.success, AppStrings.successfulLogin);
+      Get.snackbar(AppStrings.success, AppStrings.successfulLogin);
       log(AppStrings.successfulLogin);
     } on FirebaseAuthException catch (e) {
       handleFirebaseAuthException(e);
@@ -30,5 +29,16 @@ login()async{
       Get.snackbar(AppStrings.authenticationError, e.toString());
       log(e.toString());
     }
-}
   }
+
+  loginWithGoogle() async {
+    try {
+      await _authService.signInWithGoogle();
+      Get.snackbar(AppStrings.success, AppStrings.successfulLogin);
+      log(AppStrings.successfulLogin);
+    } catch (e) {
+      Get.snackbar(AppStrings.authenticationError, e.toString());
+      log(e.toString());
+    }
+  }
+}
