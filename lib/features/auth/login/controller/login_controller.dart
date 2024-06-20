@@ -7,7 +7,7 @@ import 'package:speedcircles/core/constants/app_strings.dart';
 import 'package:speedcircles/features/auth/model/user_model.dart';
 import 'package:speedcircles/features/auth/services/auth_service.dart';
 
-class RegisterController extends GetxController {
+class LoginController extends GetxController {
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
   final _authService = AuthService.to;
