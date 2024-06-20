@@ -19,6 +19,7 @@ class LoginBodyWidget extends GetView<LoginController> {
         suTitle: AppStrings.loginToContinue,
       ),
       formWidget: AuthFormWidget(
+        onPressed: controller.login,
         textFormFieldList: Column(
           children: [
              CustomTextFormField(
