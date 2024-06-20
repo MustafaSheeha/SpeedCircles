@@ -12,7 +12,12 @@
           "package_name": "com.speedcircles.app"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "1035827629927-gi6lfg2nqkqrf696a5oujt76e42gasoc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyDVwEJv0_sfhgF0SO0cyIp4LzkJRYcfl3o"
@@ -20,7 +25,19 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1035827629927-gi6lfg2nqkqrf696a5oujt76e42gasoc.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1035827629927-e2ta00329jqt2sgkn7qjb1urb2fjjnc0.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.speedcircles.RunnerTests"
+              }
+            }
+          ]
         }
       }
     }
